@@ -24,7 +24,5 @@ Predictions are evaluated with a modified version of the Laplace Log Likelihood.
 
 The evaluation metric of this competition is a modified version of Laplace Log Likelihood. Read more about it on the [Evaluation Page](https://www.kaggle.com/c/osic-pulmonary-fibrosis-progression/overview/evaluation).
 
-![LLL.png](attachment:LLL.png)
-
-This notebook explores the functioning of this metric with some examples and visualizations.
+<img src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kaggle.com%2Frohanrao%2Fosic-understanding-laplace-log-likelihood&psig=AOvVaw0VmK0ECKUjJ2rKcok5gkCp&ust=1602167094592000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjeq9jXouwCFQAAAAAdAAAAABAc" width = 650 >
 
