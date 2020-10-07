@@ -4,13 +4,11 @@
 What is pulmonary fibrosis ? 
 Pulmonary fibrosis is a lung disease that occurs when lung tissue becomes damaged and scarred. This thickened, stiff tissue makes it more difficult for your lungs to work properly. As pulmonary fibrosis worsens, you become progressively more short of breath.
 
+<img src="https://www.pulmonaryfibrosis.org/images/default-source/default-album/normal-and-impaired-gas-exchange.png?sfvrsn=c3b0918d_0" width=600>
+
 What we need to predict ?
 We need to predict a patient’s severity of decline in lung function based on a CT scan of their lungs. Lung function is assessed based on output from a spirometer, which measures the forced vital capacity (FVC), i.e. the volume of air exhaled. The challenge is to use machine learning techniques to make a prediction with the image, metadata, and baseline FVC as input.
 
-
+Meta data :-
 <img src="https://i.imgur.com/8AWVnqQ.png" width=650>
 
-Now lets look at the data that we have :
-1. Image data 
-2. Tabular data 
-1. Image data :- It consists of 
