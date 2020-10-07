@@ -26,3 +26,6 @@ Predictions are evaluated with a modified version of the Laplace Log Likelihood.
 ##  DELTA = tf.minimum( tf.math.abs(FVCtrue - FVCpred),1000)
 
 ## metric = (-tf.math.sqrt(2) * DELTA / SIGMAclipped) - tf.math.log(tf.math.sqrt(2)*SIGMAclipped)
+
+# My approach :- 
+
