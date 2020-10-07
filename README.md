@@ -21,8 +21,6 @@ Predictions are evaluated with a modified version of the Laplace Log Likelihood.
 
 ![](https://i.imgur.com/tEIZvli.png)
 
-\begin{equation} 
-\sigma_{clipped} = max(\sigma, 70)\\
-\Delta = min ( |FVC_{true} - FVC_{predicted}|, 1000 )\\
-metric = -   \frac{\sqrt{2} \Delta}{\sigma_{clipped}} - \ln ( \sqrt{2} \sigma_{clipped} )
-\end{equation}
+SIGMAclipped = tf.maximum( SIGMA , 70)
+DELTA = tf.minimum( tf.math.abs(FVCtrue - FVCpred),1000)
+metric = (-tf.math.sqrt(2) * DELTA / SIGMAclipped) - tf.math.log(tf.math.sqrt(2)*SIGMAclipped)
