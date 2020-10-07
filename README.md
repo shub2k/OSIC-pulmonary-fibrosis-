@@ -22,7 +22,7 @@ Predictions are evaluated with a modified version of the Laplace Log Likelihood.
 ![](https://i.imgur.com/tEIZvli.png)
 *Image Credits: https://en.wikipedia.org/wiki/Laplace_distribution*
 
-The evaluation metric of this competition is a modified version of Laplace Log Likelihood. Read more about it on the [Evaluation Page](https://www.kaggle.com/c/osic-pulmonary-fibrosis-progression/overview/evaluation).
+The evaluation metric of this competition is a modified version of Laplace Log Likelihood. 
 
-<img src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kaggle.com%2Frohanrao%2Fosic-understanding-laplace-log-likelihood&psig=AOvVaw0VmK0ECKUjJ2rKcok5gkCp&ust=1602167094592000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjeq9jXouwCFQAAAAAdAAAAABAc" width = 650 >
+<img src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kaggle.com%2Frohanrao%2Fosic-understanding-laplace-log-likelihood&psig=AOvVaw0VmK0ECKUjJ2rKcok5gkCp&ust=1602167094592000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjeq9jXouwCFQAAAAAdAAAAABAc">
 
