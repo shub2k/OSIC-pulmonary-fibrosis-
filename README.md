@@ -19,17 +19,5 @@ We need to predict a patient’s severity of decline in lung function based on a
 - The evaluation metric of this competition is a modified version of Laplace Log Likelihood. 
 Predictions are evaluated with a modified version of the Laplace Log Likelihood. For each sample in test set, an `FVC` and a `Confidence` measure (standard deviation σ) has to be predicted.
 
-    `Confidence` values smaller than 70 are clipped.
-    
-    $\large \sigma_{clipped} = max(\sigma, 70),$
+![LLL.png](attachment:LLL.png)
 
-    Errors greater than 1000 are also clipped in order to avoid large errors.
-
-    $\large \Delta = min ( |FVC_{true} - FVC_{predicted}|, 1000 ),$
-
-    The metric is defined as:
-
-    $\Large metric = -   \frac{\sqrt{2} \Delta}{\sigma_{clipped}} - \ln ( \sqrt{2} \sigma_{clipped} ).$
-
-
-Read more about it on the [Evaluation Page](https://www.kaggle.com/c/osic-pulmonary-fibrosis-progression/overview/evaluation).
