@@ -30,8 +30,8 @@ metric = (-tf.math.sqrt(2) * DELTA / SIGMAclipped) - tf.math.log(tf.math.sqrt(2)
 # My approach :- 
 My final solution is a blend / weighted ensemble of 4 models :-
 
-A. efficientnet with b5 layer which were trained on  windowed lung ct scan images along with the meta data for 5 folds. 
-the approach on this model was to use the images to predict the betas (slopes for the FVC declines ) 
+A. efficientnet with b5 layer which were trained on  windowed lung ct scan images along with the meta data for 5 folds -> pool -> flatten -> dropout -> concat. And the meta model was a simple head with features -> linear -> relu -> linear -> relu -> concat. The final models either had 512->1024 or 100->100 features for the head. And finally a simple linear layer for the 3 FVC output.
+the approach on this model was to use the images to predict the betas (slopes for the FVC declines ) and apply the linear decay method 
 training parameters of efficient net :-
 
 1. Adam optimizer with Reduce on Plateau scheduler
@@ -75,5 +75,17 @@ E. Weighted Ensemble :
 these are the final weights that i finally used after doing tons of subission .
 
 final_model = efficientnet_model * 0.25 + qunatile_regressor * 0.44 + elatic_net * 0.18 + lasso * 0.13
+
+#   Major Things that i tried but didnt got good answers :-
+1. Used resnet instead of efficient net 
+2. tried all the layers of the efficient net but b5 layer was giving the best results 
+3. used MAE for training of the effnet model
+4. used normal pinball loss function in qunatile regressor model 
+5. tried various macahine learning models such as lightgbm / ridge / bayesian ridge / ngboost / hubet / catboost 
+6. added lstm layer in quantile regressor 
+7. 3D efficient nets 
+
+# My opinion :-
+I want to say that this was an awesome competetion that I am so glad I participated in! Very glad to get my first silver medal!
 
 
