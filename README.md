@@ -68,9 +68,24 @@ parametrs used while training :
 C. Elastic net model :-
 elsatic net and lasso performed better as compared to ridge / lgbm / ngboost / bayesian ridge / huber / catboost models i tried all of them and finally used elastic net for
 the final model and finally by hypertuning the parametrs with groupkfold for 10 folds for cv evaluation i did weighted ensembling 
+tabular data used :- 
+1. baseline_FVC
+2.baseline_Percent 
+3.Age
+4.Sex
+5.Smoking status 
+6.baseline week 
+
 
 D. Lasso model :-
 lasso also gave better cv results as compared to other machine learning models that i tried so  i used lasso for final model after tuning its hyper parametrs 
+1. baseline_FVC
+2.baseline_Percent 
+3.Age
+4.Sex
+5.Smoking status 
+6.baseline week 
+
 
 E. Weighted Ensemble :
 
@@ -78,14 +93,19 @@ these are the final weights that i finally used after doing tons of subission .
 
 final_model = efficientnet_model * 0.25 + qunatile_regressor * 0.44 + elatic_net * 0.18 + lasso * 0.13
 
-#   Major Things that i tried but didnt got good answers :-
+# Things that didnt work:-
 1. Used resnet instead of efficient net 
 2. tried all the layers of the efficient net but b5 layer was giving the best results 
 3. used MAE for training of the effnet model
 4. used normal pinball loss function in qunatile regressor model 
 5. tried various macahine learning models such as lightgbm / ridge / bayesian ridge / ngboost / hubet / catboost 
 6. added lstm layer in quantile regressor 
-7. 3D efficient nets 
+7. 3D efficient nets
+8. Calucalted heights of each patient using the function that doctors used given by spirometry calculator ( also i took the average of the different race values )
+9. Calculated FEV , fvc/fev ratio of each pateints similarly 
+10. Image meta data didnt worked at all such as slice thickness 
+11. tried to calculate the volume of lungs of patients but this feature also didnt helped .
+
 
 # My opinion :-
 I want to say that this was an awesome competetion that I am so glad I participated in! Very glad to get my first silver medal!
