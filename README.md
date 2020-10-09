@@ -1,4 +1,4 @@
-# OSIC-pulmonary-fibrosis-Competetion rank - 67 ( silver medal ) our score = -6.847 , First position score = -6.8305
+# OSIC-pulmonary-fibrosis-Competetion rank - 67 ( silver medal ) My score = -6.847 , First position score = -6.8305
   https://www.kaggle.com/c/osic-pulmonary-fibrosis-progression
 
 # What is pulmonary fibrosis ? 
