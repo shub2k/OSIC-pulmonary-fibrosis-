@@ -30,7 +30,7 @@ metric = (-tf.math.sqrt(2) * DELTA / SIGMAclipped) - tf.math.log(tf.math.sqrt(2)
 # My approach :- 
 My final solution is a blend / weighted ensemble of 4 models :-
 
-1. efficientnet with b5 layer which were trained on  windowed lung ct scan images along with the meta data for 5 folds. 
+A. efficientnet with b5 layer which were trained on  windowed lung ct scan images along with the meta data for 5 folds. 
 the approach on this model was to use the images to predict the betas (slopes for the FVC declines ) 
 training parameters of efficient net :-
 
@@ -41,7 +41,7 @@ image size 520x520
 4. Batch size of 16 (bs of 4 for one model)
 5. Saved checkpoint based on best validation score . 
 
-2. Qunatile regressor with custom pinball loss function ( only tabular data used )
+B. Qunatile regressor with custom pinball loss function ( only tabular data used )
 I did in depth research on pinball loss function and finally used a novel assymetric pinball loss function with epsilon value of 0.8 
 because the normal pinball loss function was not giving good results as the data was very noisy 
 
@@ -63,14 +63,14 @@ parametrs used while training :
 4. batch size = 128 
 5. Didn't use any batch accumulation or mixed precision
 
-3. Elastic net model :-
+C. Elastic net model :-
 elsatic net and lasso performed better as compared to ridge / lgbm / ngboost / bayesian ridge / huber / catboost models i tried all of them and finally used elastic net for
 the final model and finally by hypertuning the parametrs with groupkfold for 10 folds for cv evaluation i did weighted ensembling 
 
-4. Lasso model :-
+D. Lasso model :-
 lasso also gave better cv results as compared to other machine learning models that i tried so  i used lasso for final model after tuning its hyper parametrs 
 
-4. Weighted Ensemble :
+E. Weighted Ensemble :
 
 these are the final weights that i finally used after doing tons of subission .
 
