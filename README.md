@@ -95,7 +95,7 @@ final_model = efficientnet_model * 0.25 + qunatile_regressor * 0.44 + elatic_net
 
 # Things that didnt work:-
 1. Used resnet instead of efficient net 
-2. tried all the layers of the efficient net but b5 layer was giving the best results 
+2. tried all the model version of the efficient net but b5 model was giving the best results 
 3. used MAE for training of the effnet model
 4. used normal pinball loss function in qunatile regressor model 
 5. tried various macahine learning models such as lightgbm / ridge / bayesian ridge / ngboost / hubet / catboost 
