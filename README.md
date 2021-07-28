@@ -32,7 +32,7 @@ metric = (-tf.math.sqrt(2) * DELTA / SIGMAclipped) - tf.math.log(tf.math.sqrt(2)
 # My approach :- 
 My final solution is a blend / weighted ensemble of 4 models :-
 
-A. efficientnet with b5 layer which were trained on  windowed lung ct scan images along with the meta data for 5 folds -> pool -> flatten -> dropout -> concat. And the meta model was a simple head with features -> linear -> relu -> linear -> relu -> concat. The final models either had 512->1024 or 100->100 features for the head. And finally a simple linear layer for the 3 FVC output.
+A. efficientnet b5 model which were trained on  windowed lung ct scan images along with the meta data for 5 folds -> pool -> flatten -> dropout -> concat. And the meta model was a simple head with features -> linear -> relu -> linear -> relu -> concat. The final models either had 512->1024 or 100->100 features for the head. And finally a simple linear layer for the 3 FVC output.
 the approach on this model was to use the images to predict the betas (slopes for the FVC declines ) and apply the linear decay method 
 training parameters of efficient net :-
 
