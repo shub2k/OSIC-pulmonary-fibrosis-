@@ -110,6 +110,4 @@ final_model = efficientnet_model * 0.25 + qunatile_regressor * 0.44 + elatic_net
 # My opinion :-
 I want to say that this was an awesome competetion that I am so glad I participated in! Very glad to get my first silver medal!
 
-my kaggle profile link :- 
-https://www.kaggle.com/trooperog
-
+<a href = "https://www.kaggle.com/trooperog"> My Kaggle Profile </a>
